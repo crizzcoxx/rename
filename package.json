@@ -1,0 +1,33 @@
+{
+  "name": "renaming_shit",
+  "version": "1.0.0",
+  "description": "typing my own stuff",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack src/app.js public/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crizzcoxx/crizzcoxx.github.io.git"
+  },
+  "keywords": [
+    "react",
+    "testing",
+    "playing"
+  ],
+  "author": "Cox in da house",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crizzcoxx/crizzcoxx.github.io/issues"
+  },
+  "homepage": "https://github.com/crizzcoxx/crizzcoxx.github.io#readme"
+}
