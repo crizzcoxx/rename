@@ -1,3 +1,3 @@
 var React = require('react')
 var ReactDom = require('react-dom')
-var dom = 
+var div = React.Dom.div
