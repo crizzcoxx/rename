@@ -2,7 +2,7 @@ var React = require('react')
 var ReactDom = require('react-dom')
 var div = React.Dom.div
 
-var myComponent = React.creatClass({
+var myTitle = React.creatClass({
 	render() {
 		return (
 			div(null, h1({style: color: blue}))
@@ -13,4 +13,4 @@ var myComponent = React.creatClass({
 	}
 })
 
-reactDOM.render(myComponent, document.getElementById('app'));
+reactDOM.render(myTitle, document.getElementById('app'));
