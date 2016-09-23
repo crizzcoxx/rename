@@ -5,7 +5,7 @@ var div = React.Dom.div
 var myComponent = React.creatClass({
 	render() {
 		return (
-			div(null, h1({style:})
+			div(null, h1({style:}))
 			)
 
 		);
@@ -13,3 +13,4 @@ var myComponent = React.creatClass({
 	}
 })
 
+reactDOM.render(myComponent, document.getElementById('app'));
