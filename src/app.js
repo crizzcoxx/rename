@@ -5,7 +5,7 @@ var div = React.Dom.div
 var myComponent = React.creatClass({
 	render() {
 		return (
-			div(null, h1({style:}))
+			div(null, h1({style: color: blue}))
 			)
 
 		);
