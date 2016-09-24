@@ -3,15 +3,11 @@ var ReactDom = require('react-dom')
 var header1 = require('./header1')
 var div = React.Dom.div
 
-var header1 = React.creatClass({
-	render() {
-		return (
-			div(null, h1({style: color: blue}))
-			)
+var allMyHeaders = (
+	div(null,
+		React.createElement(header1, {color: 'blue', title: 'damn'})
+	)
+	
+)
 
-		);
-
-	}
-})
-
-reactDOM.render(header1, document.getElementById('app'));
+reactDOM.render(AllMyHeaders, document.getElementById('app'));
