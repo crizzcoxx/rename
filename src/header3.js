@@ -3,11 +3,11 @@ var ReactDOM = require('react-dom')
 var div = React.DOM.div
 var h3 = React.DOM.div
 
-var header3 = react.createClass ({
+var header3 = React.createClass ({
 	render () {
 		return(
 			div(null, 
-				h3({style: {this.props.color}}, this.props.title)
+				h3({style: {color: this.props.color}}, this.props.title)
 			)
 		)
 	}

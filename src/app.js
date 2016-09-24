@@ -9,7 +9,7 @@ var allMyHeaders = (
 	div(null,
 		React.createElement(header1, {color: 'blue', title: 'damn'}),
 		React.createElement(header2, {color: 'purple', title: 'this shit\'s'}),
-		React.createElement(header3, {color: 'yellow', title: 'hard'})
+		React.createElement(header3, {color: 'black', title: 'hard'})
 	)
 	
 )
