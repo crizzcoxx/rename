@@ -1,7 +1,7 @@
 var React = require('react')
-var ReactDom = require('react-dom')
-var header1 = require('./header1')
-var div = React.Dom.div
+var ReactDOM = require('react-dom')
+var header1 = require('./header1.js')
+var div = React.DOM.div
 
 var allMyHeaders = (
 	div(null,
@@ -10,4 +10,4 @@ var allMyHeaders = (
 	
 )
 
-reactDOM.render(AllMyHeaders, document.getElementById('app'));
+reactDOM.render(allMyHeaders, document.getElementById('app'));
