@@ -1,6 +1,7 @@
 var React = require('react')
 var ReactDom = require('react-dom')
 var h1 = React.DOM.h1
+var div = React.DOM.div
 
 var header1 = React.createClass ({
 	render () {
