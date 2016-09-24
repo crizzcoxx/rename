@@ -10,4 +10,4 @@ var allMyHeaders = (
 	
 )
 
-reactDOM.render(allMyHeaders, document.getElementById('app'));
+ReactDOM.render(allMyHeaders, document.getElementById('app'));
