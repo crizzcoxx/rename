@@ -2,7 +2,7 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 
 const Heada = React.createClass({
-	render () {
+	render () {	
 		return (
 			<div>
 				<header style= {{color: this.props.color}} />
