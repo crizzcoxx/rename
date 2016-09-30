@@ -1,16 +1,15 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
-var div = React.DOM.div
-var h3 = React.DOM.div
+const React = require('react')
+const ReactDOM = require('react-dom')
 
-var header3 = React.createClass ({
+const Header3 = React.createClass ({
 	render () {
-		return(
-			div(null, 
-				h3({style: {color: this.props.color}}, this.props.title)
-			)
+		return (
+			<div> 
+				<h3 style= {{color: this.props.color}}> {this.props.title}
+				</h3>
+			</div>
 		)
 	}
 })
 
-module.exports = header3
+module.exports = Header3

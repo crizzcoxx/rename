@@ -1,14 +1,14 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 
-const Heada = React.createClass({
+const MyImage = React.createClass({
 	render () {
 		return (
 			<div>
-				<header style= {{color: this.props.color}} />
+				<img src= {this.props.src} />
 			</div>
 		)
 	}
 })
 
-module.exports = Heada
+module.exports = MyImage

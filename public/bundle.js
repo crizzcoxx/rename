@@ -44,23 +44,29 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1)
-	var ReactDOM = __webpack_require__(34)
-	var header1 = __webpack_require__(172)
-	var header2 = __webpack_require__(173)
-	var header3 = __webpack_require__(174)
-	var div = React.DOM.div
+	'use strict';
 
-	var allMyHeaders = (
-		div(null,
-			React.createElement(header1, {color: 'blue', title: 'damn'}),
-			React.createElement(header2, {color: 'purple', title: 'this shit\'s'}),
-			React.createElement(header3, {color: 'black', title: 'hard'})
-		)
-		
-	)
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+	var Header1 = __webpack_require__(172);
+	var Header2 = __webpack_require__(173);
+	var Header3 = __webpack_require__(174);
+	var Heada = __webpack_require__(175);
+	var MyImage = __webpack_require__(176);
 
-	ReactDOM.render(allMyHeaders, document.getElementById('app'));
+	var MyComponents = function MyComponents() {
+		return React.createElement(
+			'div',
+			null,
+			React.createElement(Header1, { color: 'blue', title: 'damn' }),
+			React.createElement(Header2, { color: 'purple', title: 'this shit is' }),
+			React.createElement(Header3, { color: 'black', title: 'hard' }),
+			React.createElement(Heada, { color: '#79BBDD' }),
+			React.createElement(MyImage, { src: 'https://lifeasananomaly.files.wordpress.com/2015/02/wpid-photo-20150214004036062.jpg?w=720&h=478' })
+		);
+	};
+
+	ReactDOM.render(React.createElement(MyComponents, null), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -16029,7 +16035,8 @@
 	  if (x === y) {
 	    // Steps 1-5, 7-10
 	    // Steps 6.b-6.e: +0 != -0
-	    return x !== 0 || 1 / x === 1 / y;
+	    // Added the nonzero y check to make Flow happy, but it is redundant
+	    return x !== 0 || y !== 0 || 1 / x === 1 / y;
 	  } else {
 	    // Step 6.a: NaN == NaN
 	    return x !== x && y !== y;
@@ -21432,65 +21439,126 @@
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1)
-	var ReactDom = __webpack_require__(34)
-	var h1 = React.DOM.h1
-	var div = React.DOM.div
+	'use strict';
 
-	var header1 = React.createClass ({
-		render () {
-			return(
-				div(null, 
-					h1({style: {color: this.props.color}}, this.props.title)
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Header1 = React.createClass({
+		displayName: 'Header1',
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h1',
+					{ style: { color: this.props.color } },
+					' ',
+					this.props.title
 				)
-			)
+			);
 		}
-	})
+	});
 
-	module.exports = header1
+	module.exports = Header1;
 
 /***/ },
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1)
-	var ReactDOM = __webpack_require__(34)
-	var div = React.DOM.div
-	var h2 = React.DOM.h2
+	'use strict';
 
-	var header2 = React.createClass ({
-		render () {
-			return(
-				div(null,
-					h2({style: {color: this.props.color}}, this.props.title)
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Header2 = React.createClass({
+		displayName: 'Header2',
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h2',
+					{ style: { color: this.props.color } },
+					' ',
+					this.props.title
 				)
-			)
+			);
 		}
-	})
+	});
 
-	module.exports = header2
+	module.exports = Header2;
 
 /***/ },
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var React = __webpack_require__(1)
-	var ReactDOM = __webpack_require__(34)
-	var div = React.DOM.div
-	var h3 = React.DOM.div
+	'use strict';
 
-	var header3 = React.createClass ({
-		render () {
-			return(
-				div(null, 
-					h3({style: {color: this.props.color}}, this.props.title)
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Header3 = React.createClass({
+		displayName: 'Header3',
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h3',
+					{ style: { color: this.props.color } },
+					' ',
+					this.props.title
 				)
-			)
+			);
 		}
-	})
+	});
 
-	module.exports = header3
+	module.exports = Header3;
 
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var Heada = React.createClass({
+		displayName: 'Heada',
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement('header', { style: { color: this.props.color } })
+			);
+		}
+	});
+
+	module.exports = Heada;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(34);
+
+	var MyImage = React.createClass({
+		displayName: 'MyImage',
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement('img', { src: this.props.src })
+			);
+		}
+	});
+
+	module.exports = MyImage;
 
 /***/ }
 /******/ ]);
